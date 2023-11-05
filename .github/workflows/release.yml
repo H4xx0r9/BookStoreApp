@@ -41,7 +41,7 @@ jobs:
           # Delete output directory
           rm -r "$release_name"
 
-      - name: Create Release
+      - name: Release
         id: create_release
         uses: actions/create-release@v1
         env:
