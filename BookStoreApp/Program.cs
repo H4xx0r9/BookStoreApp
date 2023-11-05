@@ -19,7 +19,7 @@ Options:
 var arguments = new Docopt().Apply(usage, args, version: "1.0", exit: true)!;
 
 var action = args[0];
-const string path = "C:\\Users\\Madso\\BookStoreApp\\BookStoreApp\\chirp_cli_db.csv";
+const string path = @"C:\Users\Madso\BookStoreApp\BookStoreApp\chirp_cli_db.csv";
 var database = new CSVDatabase(path);
 
 
