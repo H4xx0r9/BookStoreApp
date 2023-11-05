@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Nx8Ge3SJIB78dxpNEfpgQR8Zr5AJ2lsfWZ7FrbbKJCH82gEyaV6SeX4Xzj3pvTeEk32X7rDmAZtP0RKRNzlChw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Madso\\RiderProjects\\BookStoreApp\\BookStoreApp\\BookStoreApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Madso\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
+    "C:\\Users\\Madso\\.nuget\\packages\\docopt.net\\0.8.1\\docopt.net.0.8.1.nupkg.sha512",
+    "C:\\Users\\Madso\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
