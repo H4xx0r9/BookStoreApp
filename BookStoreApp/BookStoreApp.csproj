@@ -17,9 +17,4 @@
       <Content Include="SimpleDB\SimpleDB.csproj" />
     </ItemGroup>
 
-
-    <ItemGroup>
-      <Folder Include="UnixTests\" />
-    </ItemGroup>
-
 </Project>
