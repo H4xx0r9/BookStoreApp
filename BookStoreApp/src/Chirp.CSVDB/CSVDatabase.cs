@@ -1,8 +1,8 @@
-﻿
-using System.Globalization;
+﻿using System.Globalization;
+using BookStoreApp.SimpleDB;
 using CsvHelper;
 
-namespace BookStoreApp.SimpleDB
+namespace BookStoreApp.src.Chirp.CSVDB
 {
     public sealed class CSVDatabase : IDatabaseRepository<Cheeps>
     {

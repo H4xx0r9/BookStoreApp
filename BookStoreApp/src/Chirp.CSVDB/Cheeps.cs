@@ -1,4 +1,4 @@
-﻿namespace BookStoreApp;
+﻿namespace BookStoreApp.src.Chirp.CSVDB;
 
 public record Cheeps
 {

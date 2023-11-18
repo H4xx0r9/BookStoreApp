@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 using BookStoreApp;
-using BookStoreApp.SimpleDB;
+using BookStoreApp.src.Chirp.CSVDB;
 using DocoptNet;
 
 const string usage = @"Chirp CLI version.
@@ -19,7 +20,7 @@ Options:
 var arguments = new Docopt().Apply(usage, args, version: "1.0", exit: true)!;
 
 var action = args[0];
-const string path = @"C:\Users\Madso\BookStoreApp\BookStoreApp\chirp_cli_db.csv";
+const string path = @"C:\Users\Madso\BookStoreApp\BookStoreApp\sdata\chirp_cli_db.csv";
 var database = new CSVDatabase(path);
 
 
