@@ -1,0 +1,5 @@
+C:\Users\Madso\BookStoreApp\BookStoreApp\src\Chirp.CSVDB\obj\Debug\net7.0\SimpleDB.csproj.AssemblyReference.cache
+C:\Users\Madso\BookStoreApp\BookStoreApp\src\Chirp.CSVDB\obj\Debug\net7.0\SimpleDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Madso\BookStoreApp\BookStoreApp\src\Chirp.CSVDB\obj\Debug\net7.0\SimpleDB.AssemblyInfoInputs.cache
+C:\Users\Madso\BookStoreApp\BookStoreApp\src\Chirp.CSVDB\obj\Debug\net7.0\SimpleDB.AssemblyInfo.cs
+C:\Users\Madso\BookStoreApp\BookStoreApp\src\Chirp.CSVDB\obj\Debug\net7.0\SimpleDB.csproj.CoreCompileInputs.cache

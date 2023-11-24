@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9hCFVPQsi3Wd0pkpBXXN6v4K11jonNvD1a0eAbK9LS7SCluvoqe3ESj63hR6wbrvALUhSFf8mlzS3s3GbBdj7Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Madso\\BookStoreApp\\BookStoreApp\\src\\Chirp.CSVDB\\SimpleDB.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Madso\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

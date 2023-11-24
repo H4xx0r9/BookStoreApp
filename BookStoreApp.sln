@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreApp", "BookStoreApp\BookStoreApp.csproj", "{A35B967A-D43C-44BA-9F51-8A43C76A1D22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5BC4C5D4-F548-4F74-9AD6-6AC00665845D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirp.CSVDBService", "Chirp.CSVDBService\Chirp.CSVDBService.csproj", "{A2E348C5-CC3C-44C9-B14E-F8E9F0BC0537}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{A35B967A-D43C-44BA-9F51-8A43C76A1D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A35B967A-D43C-44BA-9F51-8A43C76A1D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A35B967A-D43C-44BA-9F51-8A43C76A1D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC4C5D4-F548-4F74-9AD6-6AC00665845D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC4C5D4-F548-4F74-9AD6-6AC00665845D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC4C5D4-F548-4F74-9AD6-6AC00665845D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC4C5D4-F548-4F74-9AD6-6AC00665845D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E348C5-CC3C-44C9-B14E-F8E9F0BC0537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E348C5-CC3C-44C9-B14E-F8E9F0BC0537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E348C5-CC3C-44C9-B14E-F8E9F0BC0537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E348C5-CC3C-44C9-B14E-F8E9F0BC0537}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

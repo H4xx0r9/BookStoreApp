@@ -46,6 +46,7 @@ switch (action)
     }
     default:
         Console.WriteLine("IMPOSSIBLE command");
+        
         break;
 }
 

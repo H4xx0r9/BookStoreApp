@@ -16,8 +16,4 @@
       <Content Include="src\Chirp.CSVDB\SimpleDB.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="test\" />
-    </ItemGroup>
-
 </Project>

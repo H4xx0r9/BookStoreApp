@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "uFfwOzxoXYAXj/EDJ/CZrAALB9fAWO3hC+bjcOb0ZM1lq6e88lN0sp9klzlENIimhX3AQ32yvmncwa61OeMt1g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Madso\\BookStoreApp\\Chirp.CSVDBService\\Chirp.CSVDBService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Madso\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
+    "C:\\Users\\Madso\\.nuget\\packages\\docopt.net\\0.8.1\\docopt.net.0.8.1.nupkg.sha512",
+    "C:\\Users\\Madso\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

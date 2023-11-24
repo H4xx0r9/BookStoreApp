@@ -1,7 +1,0 @@
-C:\Users\Madso\BookStoreApp\BookStoreApp\bin\Debug\net7.0\publish\BookStoreApp.exe
-C:\Users\Madso\BookStoreApp\BookStoreApp\bin\Debug\net7.0\publish\BookStoreApp.dll
-C:\Users\Madso\BookStoreApp\BookStoreApp\bin\Debug\net7.0\publish\BookStoreApp.deps.json
-C:\Users\Madso\BookStoreApp\BookStoreApp\bin\Debug\net7.0\publish\BookStoreApp.runtimeconfig.json
-C:\Users\Madso\BookStoreApp\BookStoreApp\bin\Debug\net7.0\publish\BookStoreApp.pdb
-C:\Users\Madso\BookStoreApp\BookStoreApp\bin\Debug\net7.0\publish\CsvHelper.dll
-C:\Users\Madso\BookStoreApp\BookStoreApp\bin\Debug\net7.0\publish\DocoptNet.dll

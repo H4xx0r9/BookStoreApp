@@ -1,76 +1,50 @@
-name: Publish
-
+name: Release
 on:
-  release:
-    types: [published]
-
+  workflow_run:
+    workflows: ["Test"]
+    branches: [main]
+    types:
+      - completed
+  push:
+    tags:
+      - "v*.*.*"
+    branches: [main]
 jobs:
+  tests:
+    uses: ./.github/workflows/build_and_test.yml
   release:
-    name: Release
-    strategy:
-      matrix:
-        kind: ['linux', 'windows', 'macOS']
-        include:
-          - kind: linux
-            os: ubuntu-latest
-            target: linux-x64
-          - kind: windows
-            os: windows-latest
-            target: win-x64
-          - kind: macOS
-            os: macos-latest
-            target: osx-x64
-    runs-on: ${{ matrix.os }}
+    needs: ["tests"]
+    runs-on: ubuntu-latest
+    env:
+      DOTNET_ROOT: /home/runner/.dotnet
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          path: BookStoreApp
-          submodules: 'recursive' # If you have submodules in your repository
+        uses: actions/checkout@v1
 
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 7.0.*
-
-      - name: Build BookStoreApp
-        run: |
-          cd BookStoreApp/BookStoreApp
-          dotnet publish BookStoreApp.csproj --framework net7.0.* --runtime "${{ matrix.target }}" -c Release -o "App-${{ matrix.target }}"
-
-      - name: Build SimpleDB
-        run: |
-          cd BookStoreApp/BookStoreApp/SimpleDB
-          dotnet publish SimpleDB.csproj --framework net7.0.* --runtime "${{ matrix.target }}" -c Release -o "SimpleDB-${{ matrix.target }}"
-
-      - name: Pack and Release
+      - name: Builds release
+        shell: bash
         run: |
           tag=$(git describe --tags --abbrev=0)
-          release_name="App-$tag-${{ matrix.target }}"
+          cd "Chirp.Razor"
+          for release in linux-x64 osx-x64 win-x64
+          do
+            echo 
+          release_os=Chirp-$tag-$release
+          dotnet publish Chirp.Razor.csproj --framework net7.0 --runtime $release -c Release -o "$release_os" /p:PublishTrimmed=true /p:PublishSingleFile=true
+          7z a -tzip "${{ github.workspace }}/Chirp.Razor/${release_os}.zip" "./${release_os}/*"
+          rm -r "${release_os}"
+          done
+      - name: Set Tag
+        run: echo "TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
 
-          # Create a directory to hold both project outputs
-          mkdir -p "$release_name"
-          
-          # Move the outputs of BookStoreApp
-          mv "BookStoreApp/BookStoreApp/App-${{ matrix.target }}" "$release_name/"
-
-          # Move the outputs of SimpleDB
-          mv "BookStoreApp/BookStoreApp/SimpleDB/SimpleDB-${{ matrix.target }}" "$release_name/"
-
-          # Pack to zip for Windows
-          if [ "${{ matrix.target }}" == "win-x64" ]; then
-            7z a -tzip "${release_name}.zip" "./${release_name}/*"
-          else
-            tar czvf "${release_name}.tar.gz" "$release_name"
-          fi
-
-          # Delete output directories
-          rm -r "BookStoreApp/BookStoreApp/App-${{ matrix.target }}"
-          rm -r "BookStoreApp/BookStoreApp/SimpleDB/SimpleDB-${{ matrix.target }}"
-
-      - name: Publish
+      - name: Publish release
         uses: softprops/action-gh-release@v1
         with:
-          files: "BookStoreApp/bin/Debug/net7.0/publish/*"
+          files:  |
+            ${{ github.workspace }}/Chirp.Razor/Chirp-*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

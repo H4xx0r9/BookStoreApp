@@ -4,13 +4,23 @@ using CsvHelper;
 
 namespace BookStoreApp.src.Chirp.CSVDB
 {
+    
     public sealed class CSVDatabase : IDatabaseRepository<Cheeps>
     {
         public readonly string CsvFilePath;
+        private static CSVDatabase instance;
 
         public CSVDatabase(string filePath)
         {
             CsvFilePath = filePath;
+        }
+        public static CSVDatabase DBInstance(string filePathToDB)
+        {
+            if (instance == null) {
+                instance = new CSVDatabase(filePathToDB);
+                return instance;
+            }
+            return instance;
         }
 
         public IEnumerable<Cheeps> Read(int? limit = null)
